@@ -1,5 +1,5 @@
 # Auto generated from chem_dcat_ap.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-03-23T11:08:04
+# Generation date: 2026-04-09T10:11:49
 # Schema: chem-dcat-ap
 #
 # id: https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/
@@ -60,7 +60,7 @@ from linkml_runtime.linkml_model.types import Date, Decimal, Float, String, Urio
 from linkml_runtime.utils.metamodelcore import Decimal, URIorCURIE, XSDDate
 
 metamodel_version = "1.7.0"
-version = "0.1.0rc2.post33.dev0+fb29e03e"
+version = "0.1.0rc2.post29.dev0+edd91c53"
 
 # Namespaces
 AFE = CurieNamespace('AFE', 'http://purl.allotrope.org/ontologies/equipment#AFE_')
@@ -70,15 +70,16 @@ AFRL = CurieNamespace('AFRL', 'http://purl.allotrope.org/ontologies/role#AFRL_')
 AFX = CurieNamespace('AFX', 'http://purl.allotrope.org/ontologies/property#AFX_')
 BFO = CurieNamespace('BFO', 'http://purl.obolibrary.org/obo/BFO_')
 CHEBI = CurieNamespace('CHEBI', 'http://purl.obolibrary.org/obo/CHEBI_')
-CHEMINF = CurieNamespace('CHEMINF', 'http://semanticscience.org/resource/CHEMINF_')
+CHEMINF = CurieNamespace('CHEMINF', 'http://purl.obolibrary.org/obo/CHEMINF_')
 CHMO = CurieNamespace('CHMO', 'http://purl.obolibrary.org/obo/CHMO_')
-EDAM = CurieNamespace('EDAM', 'http://edamontology.org/data_')
+CHEBI = CurieNamespace('ChEBI', 'http://purl.obolibrary.org/obo/CHEBI_')
+EDAM = CurieNamespace('EDAM', 'https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http://edamontology.org/')
 ENVO = CurieNamespace('ENVO', 'http://purl.obolibrary.org/obo/ENVO_')
 FOODON = CurieNamespace('FOODON', 'http://purl.obolibrary.org/obo/FOODON_')
 IAO = CurieNamespace('IAO', 'http://purl.obolibrary.org/obo/IAO_')
 MOP = CurieNamespace('MOP', 'http://purl.obolibrary.org/obo/MOP_')
 NCIT = CurieNamespace('NCIT', 'http://purl.obolibrary.org/obo/NCIT_')
-NMR = CurieNamespace('NMR', 'http://nmrML.org/nmrCV#NMR:')
+NMR = CurieNamespace('NMR', 'http://purl.obolibrary.org/obo/NMR_')
 OBI = CurieNamespace('OBI', 'http://purl.obolibrary.org/obo/OBI_')
 PATO = CurieNamespace('PATO', 'http://purl.obolibrary.org/obo/PATO_')
 PROCO = CurieNamespace('PROCO', 'http://purl.obolibrary.org/obo/PROCO_')
@@ -89,15 +90,17 @@ SIO = CurieNamespace('SIO', 'http://semanticscience.org/resource/SIO_')
 T4FS = CurieNamespace('T4FS', 'http://purl.obolibrary.org/obo/T4FS_')
 VOC4CAT = CurieNamespace('VOC4CAT', 'https://w3id.org/nfdi4cat/voc4cat_')
 ADMS = CurieNamespace('adms', 'http://www.w3.org/ns/adms#')
-BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/vocab/')
 CHEMDCATAP = CurieNamespace('chemdcatap', 'https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/')
 CHEMICAL_ENTITIES_AP = CurieNamespace('chemical_entities_ap', 'https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/entity/')
+CHEMINF = CurieNamespace('cheminf', 'http://purl.obolibrary.org/obo/CHEMINF_')
+CHMO = CurieNamespace('chmo', 'http://purl.obolibrary.org/obo/CHMO_')
 DCAT = CurieNamespace('dcat', 'http://www.w3.org/ns/dcat#')
 DCATAP = CurieNamespace('dcatap', 'http://data.europa.eu/r5r/')
 DCATAPPLUS = CurieNamespace('dcatapplus', 'https://w3id.org/nfdi-de/dcat-ap-plus/')
 DCTERMS = CurieNamespace('dcterms', 'http://purl.org/dc/terms/')
 DOI = CurieNamespace('doi', 'https://doi.org/')
 ELI = CurieNamespace('eli', 'http://data.europa.eu/eli/ontology#')
+ENVO = CurieNamespace('envo', 'http://purl.obolibrary.org/obo/ENVO_')
 EPOS = CurieNamespace('epos', 'https://www.epos-eu.org/epos-dcat-ap#')
 EX = CurieNamespace('ex', 'http://example.org/')
 FOAF = CurieNamespace('foaf', 'http://xmlns.com/foaf/0.1/')
@@ -106,10 +109,12 @@ LOCN = CurieNamespace('locn', 'http://www.w3.org/ns/locn#')
 MATERIAL_ENTITIES_AP = CurieNamespace('material_entities_ap', 'https://w3id.org/nfdi-de/dcat-ap-plus/materials/')
 ODRL = CurieNamespace('odrl', 'http://www.w3.org/ns/odrl/2/')
 OWL = CurieNamespace('owl', 'http://www.w3.org/2002/07/owl#')
+PROCO = CurieNamespace('proco', 'http://purl.obolibrary.org/obo/PROCO_')
 PROV = CurieNamespace('prov', 'http://www.w3.org/ns/prov#')
 QUDT = CurieNamespace('qudt', 'http://qudt.org/schema/qudt/')
 RDF = CurieNamespace('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = CurieNamespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')
+RXNO = CurieNamespace('rxno', 'http://purl.obolibrary.org/obo/RXNO_')
 SCHEMA = CurieNamespace('schema', 'http://schema.org/')
 SKOS = CurieNamespace('skos', 'http://www.w3.org/2004/02/skos/core#')
 SOSA = CurieNamespace('sosa', 'http://www.w3.org/ns/sosa/')
@@ -2414,7 +2419,7 @@ class Laboratory(Surrounding):
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = ENVO["01001405"]
-    class_class_curie: ClassVar[str] = "ENVO:01001405"
+    class_class_curie: ClassVar[str] = "envo:01001405"
     class_name: ClassVar[str] = "Laboratory"
     class_model_uri: ClassVar[URIRef] = CHEMDCATAP.Laboratory
 
@@ -2453,7 +2458,7 @@ class ChemicalEntity(Entity):
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = CHEBI["23367"]
-    class_class_curie: ClassVar[str] = "CHEBI:23367"
+    class_class_curie: ClassVar[str] = "ChEBI:23367"
     class_name: ClassVar[str] = "ChemicalEntity"
     class_model_uri: ClassVar[URIRef] = CHEMDCATAP.ChemicalEntity
 
@@ -2509,7 +2514,7 @@ class Atom(Entity):
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = CHEBI["33250"]
-    class_class_curie: ClassVar[str] = "CHEBI:33250"
+    class_class_curie: ClassVar[str] = "ChEBI:33250"
     class_name: ClassVar[str] = "Atom"
     class_model_uri: ClassVar[URIRef] = CHEMDCATAP.Atom
 
@@ -2539,7 +2544,7 @@ class Concentration(QuantitativeAttribute):
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = CHMO["0002820"]
-    class_class_curie: ClassVar[str] = "CHMO:0002820"
+    class_class_curie: ClassVar[str] = "chmo:0002820"
     class_name: ClassVar[str] = "Concentration"
     class_model_uri: ClassVar[URIRef] = CHEMDCATAP.Concentration
 
@@ -2578,7 +2583,7 @@ class InChIKey(QualitativeAttribute):
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = CHEMINF["000059"]
-    class_class_curie: ClassVar[str] = "CHEMINF:000059"
+    class_class_curie: ClassVar[str] = "cheminf:000059"
     class_name: ClassVar[str] = "InChIKey"
     class_model_uri: ClassVar[URIRef] = CHEMDCATAP.InChIKey
 
@@ -2592,7 +2597,7 @@ class InChi(QualitativeAttribute):
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = CHEMINF["000113"]
-    class_class_curie: ClassVar[str] = "CHEMINF:000113"
+    class_class_curie: ClassVar[str] = "cheminf:000113"
     class_name: ClassVar[str] = "InChi"
     class_model_uri: ClassVar[URIRef] = CHEMDCATAP.InChi
 
@@ -2607,7 +2612,7 @@ class MolecularFormula(QualitativeAttribute):
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = CHEMINF["000042"]
-    class_class_curie: ClassVar[str] = "CHEMINF:000042"
+    class_class_curie: ClassVar[str] = "cheminf:000042"
     class_name: ClassVar[str] = "MolecularFormula"
     class_model_uri: ClassVar[URIRef] = CHEMDCATAP.MolecularFormula
 
@@ -2622,7 +2627,7 @@ class IUPACName(QualitativeAttribute):
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = CHEMINF["000107"]
-    class_class_curie: ClassVar[str] = "CHEMINF:000107"
+    class_class_curie: ClassVar[str] = "cheminf:000107"
     class_name: ClassVar[str] = "IUPACName"
     class_model_uri: ClassVar[URIRef] = CHEMDCATAP.IUPACName
 
@@ -2637,7 +2642,7 @@ class SMILES(QualitativeAttribute):
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = CHEMINF["000018"]
-    class_class_curie: ClassVar[str] = "CHEMINF:000018"
+    class_class_curie: ClassVar[str] = "cheminf:000018"
     class_name: ClassVar[str] = "SMILES"
     class_model_uri: ClassVar[URIRef] = CHEMDCATAP.SMILES
 
@@ -3143,7 +3148,7 @@ class StartingMaterial(MaterialEntity):
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = PROCO["0000029"]
-    class_class_curie: ClassVar[str] = "PROCO:0000029"
+    class_class_curie: ClassVar[str] = "proco:0000029"
     class_name: ClassVar[str] = "StartingMaterial"
     class_model_uri: ClassVar[URIRef] = CHEMDCATAP.StartingMaterial
 

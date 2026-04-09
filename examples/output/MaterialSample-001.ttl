@@ -1,0 +1,50 @@
+@prefix ENVO: <http://purl.obolibrary.org/obo/ENVO_> .
+@prefix SIO: <http://semanticscience.org/resource/SIO_> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix obo.obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix obo.pato: <http://purl.obolibrary.org/obo/PATO_> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.example.com/wood3000> a ENVO:00002040,
+        obo.obi:0000747 ;
+    terms:title "Philip's wood sample" ;
+    SIO:000008 [ a qudt:Quantity ;
+            terms:description "This is just a test value for this attribute, well knowing that this value makes no sense for a piece of wood" ;
+            terms:title "Pressure in Bar" ;
+            qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Pressure> ;
+            qudt:unit <https://qudt.org/vocab/unit/BAR> ;
+            prov:value "2.0"^^xsd:float ],
+        [ a qudt:Quantity ;
+            terms:title "Volume in L" ;
+            qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Volume> ;
+            qudt:unit <https://qudt.org/vocab/unit/L> ;
+            prov:value "0.03"^^xsd:float ],
+        [ a qudt:Quantity ;
+            terms:title "Temperature" ;
+            qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Temperature> ;
+            qudt:unit <https://qudt.org/vocab/unit/DEG_C> ;
+            prov:value "20.0"^^xsd:float ],
+        [ a qudt:Quantity ;
+            terms:title "Mass in mg" ;
+            qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Mass> ;
+            qudt:unit <https://qudt.org/vocab/unit/MilliGM> ;
+            prov:value "300.0"^^xsd:float ],
+        obo.pato:0001736 ;
+    adms:identifier [ a adms:Identifier ;
+            skos:notation "https://www.chemotion-repository.net/pid/50440" ] ;
+    prov:wasDerivedFrom <https://www.wikidata.org/wiki/Q4204> .
+
+ENVO:00002040 a schema1:DefinedTerm ;
+    schema1:name "wood" .
+
+ENVO:01000174 a schema1:DefinedTerm ;
+    schema1:name "forest biome" .
+
+<https://www.wikidata.org/wiki/Q4204> a ENVO:01000174,
+        prov:Entity .
+

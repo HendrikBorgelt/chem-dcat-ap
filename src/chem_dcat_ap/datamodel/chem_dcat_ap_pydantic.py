@@ -30,7 +30,7 @@ from pydantic import (
 
 
 metamodel_version = "None"
-version = "0.1.0rc2.post33.dev0+fb29e03e"
+version = "0.1.0rc2.post29.dev0+edd91c53"
 
 
 class ConfiguredBaseModel(BaseModel):
@@ -89,7 +89,8 @@ linkml_meta = LinkMLMeta({'default_prefix': 'chemdcatap',
      'imports': ['linkml:types',
                  'dcatapplus:latest/schema/dcat_ap_plus',
                  'chemical_entities_ap',
-                 'chemical_reaction_ap'],
+                 'chemical_reaction_ap',
+                 'bioregistry_prefixmap'],
      'license': 'CC-BY 4.0',
      'name': 'chem-dcat-ap',
      'prefixes': {'AFE': {'prefix_prefix': 'AFE',
@@ -140,8 +141,6 @@ linkml_meta = LinkMLMeta({'default_prefix': 'chemdcatap',
                               'prefix_reference': 'https://w3id.org/nfdi4cat/voc4cat_'},
                   'adms': {'prefix_prefix': 'adms',
                            'prefix_reference': 'http://www.w3.org/ns/adms#'},
-                  'biolink': {'prefix_prefix': 'biolink',
-                              'prefix_reference': 'https://w3id.org/biolink/vocab/'},
                   'chemdcatap': {'prefix_prefix': 'chemdcatap',
                                  'prefix_reference': 'https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/'},
                   'dcat': {'prefix_prefix': 'dcat',
