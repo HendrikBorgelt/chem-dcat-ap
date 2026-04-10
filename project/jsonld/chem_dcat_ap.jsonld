@@ -8,7 +8,7 @@
     "https://gitlab.com/opensourcelab/scientificdata/scidats/-/blob/feature/linkml-schemata/schemata/metadata_model_scidats_dcat_ap.yaml?ref_type=heads"
   ],
   "id": "https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/",
-  "version": "0.1.0rc2.post33.dev0+fb29e03e",
+  "version": "0.1.0rc2.post29.dev0+edd91c53",
   "imports": [
     "linkml:types",
     "dcatapplus:latest/schema/dcat_ap_plus",
@@ -208,7 +208,7 @@
       "definition_uri": "https://w3id.org/linkml/String",
       "description": "A character string",
       "notes": [
-        "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"."
+        "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string. If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"."
       ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
@@ -3166,11 +3166,7 @@
       "bindings": [
         {
           "range": "QUDTQuantityKindEnum",
-          "obligation_level": {
-            "text": "RECOMMENDED",
-            "description": "The metadata element is recommended to be present in the model",
-            "@type": "PermissibleValue"
-          },
+          "obligation_level": "RECOMMENDED",
           "binds_value_of": "id",
           "description": "Binds the type of a quantifiable attribute to a QUDT Quantity Kind instance from the QUDT Quantity Kind vocabulary.",
           "@type": "EnumBinding"
@@ -3195,11 +3191,7 @@
       "bindings": [
         {
           "range": "QUDTUnitEnum",
-          "obligation_level": {
-            "text": "RECOMMENDED",
-            "description": "The metadata element is recommended to be present in the model",
-            "@type": "PermissibleValue"
-          },
+          "obligation_level": "RECOMMENDED",
           "binds_value_of": "id",
           "description": "Restricts the allowable defined terms to the QUDT Unit vocabulary.",
           "@type": "EnumBinding"
@@ -8808,11 +8800,7 @@
           "bindings": [
             {
               "range": "QUDTQuantityKindEnum",
-              "obligation_level": {
-                "text": "RECOMMENDED",
-                "description": "The metadata element is recommended to be present in the model",
-                "@type": "PermissibleValue"
-              },
+              "obligation_level": "RECOMMENDED",
               "binds_value_of": "id",
               "description": "Binds the type of a quantifiable attribute to a QUDT Quantity Kind instance from the QUDT Quantity Kind vocabulary.",
               "@type": "EnumBinding"
@@ -8828,11 +8816,7 @@
           "bindings": [
             {
               "range": "QUDTUnitEnum",
-              "obligation_level": {
-                "text": "RECOMMENDED",
-                "description": "The metadata element is recommended to be present in the model",
-                "@type": "PermissibleValue"
-              },
+              "obligation_level": "RECOMMENDED",
               "binds_value_of": "id",
               "description": "Restricts the allowable defined terms to the QUDT Unit vocabulary.",
               "@type": "EnumBinding"
@@ -10032,12 +10016,12 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "chem_dcat_ap.yaml",
-  "source_file_date": "2026-03-23T11:00:36",
+  "source_file_date": "2026-04-07T14:20:48",
   "source_file_size": 7754,
-  "generation_date": "2026-03-23T11:08:02",
+  "generation_date": "2026-04-07T14:39:45",
   "@type": "SchemaDefinition",
   "@context": [
-    "project/jsonld/chem_dcat_ap.context.jsonld",
+    "project\\jsonld/chem_dcat_ap.context.jsonld",
     "https://w3id.org/linkml/types.context.jsonld",
     "https://w3id.org/nfdi-de/dcat-ap-plus/latest/schema/dcat_ap_plus.context.jsonld",
     "chemical_entities_ap.context.jsonld",
