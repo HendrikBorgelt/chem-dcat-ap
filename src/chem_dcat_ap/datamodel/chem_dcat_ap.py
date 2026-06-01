@@ -1,5 +1,5 @@
 # Auto generated from chem_dcat_ap.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-03-23T11:08:04
+# Generation date: 2026-06-01T12:29:51
 # Schema: chem-dcat-ap
 #
 # id: https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/
@@ -60,7 +60,7 @@ from linkml_runtime.linkml_model.types import Date, Decimal, Float, String, Urio
 from linkml_runtime.utils.metamodelcore import Decimal, URIorCURIE, XSDDate
 
 metamodel_version = "1.7.0"
-version = "0.1.0rc2.post33.dev0+fb29e03e"
+version = "0.1.0rc3.post4.dev0+6487672b"
 
 # Namespaces
 AFE = CurieNamespace('AFE', 'http://purl.allotrope.org/ontologies/equipment#AFE_')
@@ -2934,8 +2934,8 @@ class Yield(QuantitativeAttribute):
     """
     _inherited_slots: ClassVar[list[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = QUDT["Quantity"]
-    class_class_curie: ClassVar[str] = "qudt:Quantity"
+    class_class_uri: ClassVar[URIRef] = CHMO["0002855"]
+    class_class_curie: ClassVar[str] = "CHMO:0002855"
     class_name: ClassVar[str] = "Yield"
     class_model_uri: ClassVar[URIRef] = CHEMDCATAP.Yield
 
@@ -3769,10 +3769,6 @@ class PhysicalStateEnum(EnumDefinitionImpl):
         text="SOLID",
         description="A state of matter in which molecules are closely packed and cannot move past each other.",
         meaning=PATO["0001736"])
-    CRYSTAL = PermissibleValue(
-        text="CRYSTAL",
-        description="""A solid state of matter whose constituents (such as atoms, molecules, or ions) are arranged in a highly ordered microscopic structure, forming a crystal lattice that extends in all directions.""",
-        meaning=PATO["0002066"])
     LIQUID = PermissibleValue(
         text="LIQUID",
         description="""A state of matter with a definite volume but no fixed shape. Liquids adapt to the shape of their container and are nearly incompressible, maintaining their volume even under pressure.""",
@@ -3781,6 +3777,10 @@ class PhysicalStateEnum(EnumDefinitionImpl):
         text="GASEOUS",
         description="A state of matter with neither fixed volume nor fixed shape.",
         meaning=PATO["0001737"])
+    PLASMA = PermissibleValue(
+        text="PLASMA",
+        description="""A state of matter in which a gas becomes ionized and conducts electricity, often found in high-energy environments such as stars or lightning.""",
+        meaning=PATO["0015012"])
 
     _defn = EnumDefinition(
         name="PhysicalStateEnum",
