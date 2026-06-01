@@ -12,15 +12,15 @@
         OBI:0000747 ;
     dcterms:title "Philip's wood sample" ;
     SIO:000008 [ a qudt:Quantity ;
-            dcterms:title "Volume in L" ;
-            qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Volume> ;
-            qudt:unit <https://qudt.org/vocab/unit/L> ;
-            prov:value "0.03"^^xsd:float ],
-        [ a qudt:Quantity ;
             dcterms:title "Mass in mg" ;
             qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Mass> ;
             qudt:unit <https://qudt.org/vocab/unit/MilliGM> ;
             prov:value "300.0"^^xsd:float ],
+        [ a qudt:Quantity ;
+            dcterms:title "Volume in L" ;
+            qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Volume> ;
+            qudt:unit <https://qudt.org/vocab/unit/L> ;
+            prov:value "0.03"^^xsd:float ],
         [ a qudt:Quantity ;
             dcterms:title "Temperature" ;
             qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Temperature> ;
