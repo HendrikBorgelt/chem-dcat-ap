@@ -199,7 +199,7 @@
          "@id": "dcat:distribution"
       },
       "from_CV": {
-         "@type": "xsd:anyURI",
+         "@type": "@id",
          "@id": "schema:inDefinedTermSet"
       },
       "derived_from": {

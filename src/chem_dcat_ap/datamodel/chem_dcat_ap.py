@@ -59,7 +59,7 @@ from linkml_runtime.linkml_model.types import Date, Decimal, Float, Integer, Str
 from linkml_runtime.utils.metamodelcore import Decimal, URIorCURIE, XSDDate
 
 metamodel_version = "1.12.0"
-version = "0.1.0rc4"
+version = "0.1.0rc4.post1.dev0+7145170f"
 
 # Namespaces
 AFE = CurieNamespace('AFE', 'http://purl.allotrope.org/ontologies/equipment#AFE_')

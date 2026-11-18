@@ -1,0 +1,63 @@
+@prefix dcatap_plus: <https://w3id.org/nfdi-de/dcat-ap-plus/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sh:ValidationReport ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000604#X27932> ;
+            sh:resultMessage "Value does not have class prov:Entity" ;
+            sh:resultPath prov:used ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+            sh:sourceShape [ sh:class prov:Entity ;
+                    sh:description "The slot to specify the Entity that was used as an input of an Activity that is to be changed, consumed or transformed." ;
+                    sh:node dcatap_plus:Entity ;
+                    sh:nodeKind sh:IRI ;
+                    sh:order 5 ;
+                    sh:path prov:used ] ;
+            sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000604#X27932> ;
+                    sh:resultMessage "Node <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> must conform to one or more shapes in [ sh:class prov:Entity ; sh:node dcatap_plus:EvaluatedEntity ] , [ sh:node dcatap_plus:Plan ] , [ sh:class prov:Entity ; sh:node dcatap_plus:Entity ]" ;
+                    sh:resultPath prov:used ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:OrConstraintComponent ;
+                    sh:sourceShape [ sh:description "evaluated_entity: The slot to specify the Entity about which the DataGeneratingActivity produced information.; realized_plan: The slot to specify the Plan (i.e. directive information or procedure) that was realized by an Activity.; had_input_entity: The slot to specify the Entity that was used as an input of an Activity that is to be changed, consumed or transformed." ;
+                            sh:or ( [ sh:class prov:Entity ;
+                                        sh:node dcatap_plus:EvaluatedEntity ] [ sh:node dcatap_plus:Plan ] [ sh:class prov:Entity ;
+                                        sh:node dcatap_plus:Entity ] ) ;
+                            sh:order 0 ;
+                            sh:path prov:used ] ;
+                    sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ] ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000604> ;
+            sh:resultMessage "Value does not conform to Shape dcatap_plus:DataGeneratingActivity. See details for more information." ;
+            sh:resultPath prov:wasGeneratedBy ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape [ sh:class prov:Activity ;
+                    sh:description "An activity that generated, or provides the business context for, the creation of the dataset." ;
+                    sh:minCount 1 ;
+                    sh:node dcatap_plus:DataGeneratingActivity ;
+                    sh:nodeKind sh:IRI ;
+                    sh:order 35 ;
+                    sh:path prov:wasGeneratedBy ] ;
+            sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000604#X27932> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000604> ;
+            sh:resultMessage "Node <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> must conform to one or more shapes in [ sh:class prov:Entity ; sh:node dcatap_plus:EvaluatedEntity ] , [ sh:class prov:Activity ; sh:node dcatap_plus:EvaluatedActivity ]" ;
+            sh:resultPath dcterms:subject ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape [ sh:description "is_about_entity: A slot to provide the EvaluatedEntity a Dataset is about.; is_about_activity: A slot to provide the EvaluatedActivity a Dataset is about." ;
+                    sh:or ( [ sh:class prov:Entity ;
+                                sh:node dcatap_plus:EvaluatedEntity ] [ sh:class prov:Activity ;
+                                sh:node dcatap_plus:EvaluatedActivity ] ) ;
+                    sh:order 37 ;
+                    sh:path dcterms:subject ] ;
+            sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ] .
+

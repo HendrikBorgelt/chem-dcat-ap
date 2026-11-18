@@ -1,0 +1,114 @@
+@prefix dcatap_plus: <https://w3id.org/nfdi-de/dcat-ap-plus/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sh:ValidationReport ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+                    sh:resultMessage "Focus node does not conform to shape MaxCount 1: [ sh:node dcatap_plus:Plan ]" ;
+                    sh:resultPath prov:used ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:QualifiedMaxCountConstraintComponent ;
+                    sh:sourceShape [ sh:name "realized_plan" ;
+                            sh:path prov:used ;
+                            sh:qualifiedMaxCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:Plan ] ] ] ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1> ;
+            sh:resultMessage "Value does not conform to Shape dcatap_plus:DataGeneratingActivity. See details for more information." ;
+            sh:resultPath prov:wasGeneratedBy ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape [ sh:class prov:Activity ;
+                    sh:description "An activity that generated, or provides the business context for, the creation of the dataset." ;
+                    sh:minCount 1 ;
+                    sh:node dcatap_plus:DataGeneratingActivity ;
+                    sh:nodeKind sh:IRI ;
+                    sh:order 35 ;
+                    sh:path prov:wasGeneratedBy ] ;
+            sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ;
+                    sh:resultMessage "More than 1 values on <https://pubchem.ncbi.nlm.nih.gov/compound/71583>->dcterms:title" ;
+                    sh:resultPath dcterms:title ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+                    sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1765 ] ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Solvent> ;
+            sh:resultMessage "Value does not conform to Shape dcatap_plus:AgenticEntity. See details for more information." ;
+            sh:resultPath dcterms:hasPart ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1767 ;
+            sh:value <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:detail [ a sh:ValidationResult ;
+                            sh:focusNode <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ;
+                            sh:resultMessage "More than 1 values on <https://pubchem.ncbi.nlm.nih.gov/compound/71583>->dcterms:title" ;
+                            sh:resultPath dcterms:title ;
+                            sh:resultSeverity sh:Violation ;
+                            sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+                            sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1765 ] ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Solvent> ;
+                    sh:resultMessage "Value does not conform to Shape dcatap_plus:AgenticEntity. See details for more information." ;
+                    sh:resultPath dcterms:hasPart ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+                    sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1767 ;
+                    sh:value <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ] ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR> ;
+            sh:resultMessage "Value does not conform to Shape dcatap_plus:AgenticEntity. See details for more information." ;
+            sh:resultPath prov:wasAssociatedWith ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1823 ;
+            sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Solvent> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ;
+            sh:resultMessage "More than 1 values on <https://pubchem.ncbi.nlm.nih.gov/compound/71583>->dcterms:title" ;
+            sh:resultPath dcterms:title ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+            sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1765 ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ;
+                    sh:resultMessage "More than 1 values on <https://pubchem.ncbi.nlm.nih.gov/compound/71583>->dcterms:title" ;
+                    sh:resultPath dcterms:title ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+                    sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1765 ] ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR> ;
+            sh:resultMessage "Value does not conform to Shape dcatap_plus:AgenticEntity. See details for more information." ;
+            sh:resultPath prov:wasAssociatedWith ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1823 ;
+            sh:value <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ] .
+
+_:nab372f9aa0a146178eb8f658e9b13e9eb1767 sh:class prov:Agent ;
+    sh:description "The slot to specify parts of an AgenticEntity that are themselves AgenticEntities." ;
+    sh:node dcatap_plus:AgenticEntity ;
+    sh:nodeKind sh:IRI ;
+    sh:order 5 ;
+    sh:path dcterms:hasPart .
+
+_:nab372f9aa0a146178eb8f658e9b13e9eb1823 sh:class prov:Agent ;
+    sh:description "The slot to specify the AgenticEntity that played a certain part in carrying out the Activity, either via having a specific role, function or disposition that was realized in the Activity." ;
+    sh:node dcatap_plus:AgenticEntity ;
+    sh:nodeKind sh:IRI ;
+    sh:order 8 ;
+    sh:path prov:wasAssociatedWith .
+
+_:nab372f9aa0a146178eb8f658e9b13e9eb1765 sh:datatype xsd:string ;
+    sh:description "This slot is described in more detail within the class in which it is used." ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:order 1 ;
+    sh:path dcterms:title .
+

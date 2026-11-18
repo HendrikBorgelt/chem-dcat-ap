@@ -8,7 +8,7 @@
     "https://gitlab.com/opensourcelab/scientificdata/scidats/-/blob/feature/linkml-schemata/schemata/metadata_model_scidats_dcat_ap.yaml?ref_type=heads"
   ],
   "id": "https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/",
-  "version": "0.1.0rc4",
+  "version": "0.1.0rc4.post1.dev0+7145170f",
   "imports": [
     "linkml:types",
     "dcatap_plus:latest/schema/dcat_ap_plus",
@@ -8093,8 +8093,8 @@
       ],
       "from_schema": "https://w3id.org/nfdi-de/dcat-ap-plus",
       "exact_mappings": [
-        "prov:Activity",
-        "OBI:0200000"
+        "OBI:0200000",
+        "prov:Activity"
       ],
       "close_mappings": [
         "NCIT:C25391"
@@ -8311,12 +8311,12 @@
         "hardware instrument"
       ],
       "exact_mappings": [
-        "prov:Agent",
         "epos:Equipment",
         "OBI:0000968",
         "http://purl.obolibrary.org/obo/NCIT_C62103",
         "http://semanticscience.org/resource/SIO_000956",
-        "http://purl.allotrope.org/ontologies/equipment#AFE_0000354"
+        "http://purl.allotrope.org/ontologies/equipment#AFE_0000354",
+        "prov:Agent"
       ],
       "is_a": "AgenticEntity",
       "slots": [
@@ -8905,8 +8905,8 @@
       ],
       "from_schema": "https://w3id.org/nfdi-de/dcat-ap-plus",
       "exact_mappings": [
-        "prov:SoftwareAgent",
-        "schema:SoftwareApplication"
+        "schema:SoftwareApplication",
+        "prov:SoftwareAgent"
       ],
       "is_a": "AgenticEntity",
       "slots": [
@@ -9174,11 +9174,11 @@
       "description": "A QuantitativeAttribute of a ChemicalSubstance that represents the amount of a constituent divided by the volume of the mixture.",
       "from_schema": "https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/entity/",
       "exact_mappings": [
-        "CHMO:0002820",
         "EDAM:2140",
         "NCIT:C41185",
         "VOC4CAT:0007244",
-        "AFR:0002036"
+        "AFR:0002036",
+        "CHMO:0002820"
       ],
       "close_mappings": [
         "PATO:0000033"
@@ -9233,9 +9233,9 @@
       "definition_uri": "https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/entity/PHValue",
       "from_schema": "https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/entity/",
       "exact_mappings": [
-        "SIO:001089",
         "NCIT:C45997",
-        "AFR:0001142"
+        "AFR:0001142",
+        "SIO:001089"
       ],
       "close_mappings": [
         "PATO:0001842"
@@ -9409,10 +9409,10 @@
       "description": "A process that leads to the transformation of one set of chemical substances to another and that is the subject matter of a DataGeneratingActivity.",
       "from_schema": "https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/reaction/",
       "exact_mappings": [
-        "SIO:010345",
         "MOP:0000543",
         "REX:0000002",
-        "AFP:0003711"
+        "AFP:0003711",
+        "SIO:010345"
       ],
       "narrow_mappings": [
         "RXNO:0000329"
@@ -9499,9 +9499,9 @@
         "solvent"
       ],
       "exact_mappings": [
-        "SIO:010417",
         "VOC4CAT:0007246",
-        "NCIT:C45790"
+        "NCIT:C45790",
+        "SIO:010417"
       ],
       "is_a": "AgenticEntity",
       "mixins": [
@@ -9541,9 +9541,9 @@
       "description": "A ChemicalSubstance that is consumed or transformed in a ChemicalReaction.",
       "from_schema": "https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/reaction/",
       "exact_mappings": [
-        "SIO:010411",
         "NCIT:C802",
-        "VOC4CAT:0000101"
+        "VOC4CAT:0000101",
+        "SIO:010411"
       ],
       "close_mappings": [
         "OBI:0001879",
@@ -9587,8 +9587,8 @@
       "description": "A chemical substance that is produced by a ChemicalReaction.",
       "from_schema": "https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/reaction/",
       "exact_mappings": [
-        "NCIT:C48810",
-        "VOC4CAT:0000194"
+        "VOC4CAT:0000194",
+        "NCIT:C48810"
       ],
       "close_mappings": [
         "ENVO:2000000"
@@ -9630,9 +9630,9 @@
       "description": "A ChemicalSubstance or MaterialEntity that initiates or accelerates a ChemicalReaction without itself being affected.",
       "from_schema": "https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/reaction/",
       "exact_mappings": [
-        "SIO:010344",
         "VOC4CAT:0000194",
-        "NCIT:C48810"
+        "NCIT:C48810",
+        "SIO:010344"
       ],
       "close_mappings": [
         "CHEBI:35223"
@@ -9675,8 +9675,8 @@
       "description": "A reactor is a container for controlling a biological or chemical reaction or process.",
       "from_schema": "https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/reaction/",
       "exact_mappings": [
-        "AFE:0000153",
-        "VOC4CAT:0007017"
+        "VOC4CAT:0007017",
+        "AFE:0000153"
       ],
       "is_a": "Device",
       "mixins": [
@@ -9711,8 +9711,8 @@
       "description": "A dimensionless physical quantity describing the fraction of a product B that is formed from a reactant A taking into account the stoichiometry. If A fully reacts to B without side-reactions, the yield of product B is 1 (or 100 %).",
       "from_schema": "https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/reaction/",
       "exact_mappings": [
-        "CHMO:0002855",
-        "VOC4CAT:0005005"
+        "VOC4CAT:0005005",
+        "CHMO:0002855"
       ],
       "is_a": "QuantitativeAttribute",
       "slots": [
@@ -9833,9 +9833,9 @@
       "description": "A Sample that was derived from a previous MaterialSample or some other kind of MaterialEntity.",
       "from_schema": "https://w3id.org/nfdi-de/dcat-ap-plus/materials/",
       "exact_mappings": [
-        "OBI:0000747",
         "SIO:001050",
-        "VOC4CAT:0005056"
+        "VOC4CAT:0005056",
+        "OBI:0000747"
       ],
       "is_a": "EvaluatedEntity",
       "mixins": [
@@ -9993,8 +9993,8 @@
   ],
   "metamodel_version": "1.12.0",
   "source_file": "chem_dcat_ap.yaml",
-  "source_file_date": "2026-10-19T10:46:19",
-  "source_file_size": 7734,
+  "source_file_date": "2026-11-18T07:04:29",
+  "source_file_size": 7754,
   "@type": "SchemaDefinition",
   "@context": [
     "project\\jsonld/chem_dcat_ap.context.jsonld",
