@@ -1,6 +1,14 @@
+@prefix AFE: <http://purl.allotrope.org/ontologies/equipment#AFE_> .
+@prefix AFR: <http://purl.allotrope.org/ontologies/result#AFR_> .
+@prefix CHEMINF: <http://semanticscience.org/resource/CHEMINF_> .
+@prefix CHMO: <http://purl.obolibrary.org/obo/CHMO_> .
+@prefix SIO: <http://semanticscience.org/resource/SIO_> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcatap_plus: <https://w3id.org/nfdi-de/dcat-ap-plus/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,28 +16,341 @@
     sh:conforms false ;
     sh:result [ a sh:ValidationResult ;
             sh:detail [ a sh:ValidationResult ;
-                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
-                    sh:resultMessage "Focus node does not conform to shape MaxCount 1: [ sh:node dcatap_plus:Plan ]" ;
-                    sh:resultPath prov:used ;
-                    sh:resultSeverity sh:Violation ;
-                    sh:sourceConstraintComponent sh:QualifiedMaxCountConstraintComponent ;
-                    sh:sourceShape [ sh:name "realized_plan" ;
-                            sh:path prov:used ;
-                            sh:qualifiedMaxCount 1 ;
-                            sh:qualifiedValueShape [ sh:node dcatap_plus:Plan ] ] ] ;
-            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1> ;
-            sh:resultMessage "Value does not conform to Shape dcatap_plus:DataGeneratingActivity. See details for more information." ;
-            sh:resultPath prov:wasGeneratedBy ;
-            sh:resultSeverity sh:Violation ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Spectrum> ;
+                    sh:resultMessage "Recommended: has_quantitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5931 ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Spectrum> ;
+                    sh:resultMessage "Recommended: has_qualitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5917 ] ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+            sh:resultMessage "Recommendations for Entity (via had_input_entity) not met" ;
+            sh:resultPath prov:used ;
+            sh:resultSeverity sh:Warning ;
             sh:sourceConstraintComponent sh:NodeConstraintComponent ;
-            sh:sourceShape [ sh:class prov:Activity ;
-                    sh:description "An activity that generated, or provides the business context for, the creation of the dataset." ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb17 ;
+            sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Spectrum> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_AcquisitionNucleus> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb55 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2#EvaluatedCompound> ;
+            sh:resultMessage "Recommended: molecular_formula" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: molecular_formula" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/entity/MolecularFormulaShape> ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR> ;
+            sh:resultMessage "Recommended: had_input_activity" ;
+            sh:resultPath prov:wasInformedBy ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb1 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR> ;
+            sh:resultMessage "Recommended: had_output_entity" ;
+            sh:resultPath prov:generated ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb18 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1> ;
+            sh:resultMessage "Recommended: keyword" ;
+            sh:resultPath dcat:keyword ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: keyword" ;
                     sh:minCount 1 ;
-                    sh:node dcatap_plus:DataGeneratingActivity ;
-                    sh:nodeKind sh:IRI ;
-                    sh:order 35 ;
-                    sh:path prov:wasGeneratedBy ] ;
+                    sh:path dcat:keyword ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+            sh:resultMessage "Recommended: carried_out_by" ;
+            sh:resultPath prov:wasAssociatedWith ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: carried_out_by" ;
+                    sh:minCount 1 ;
+                    sh:path prov:wasAssociatedWith ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ;
+            sh:resultMessage "More than 1 values on <https://pubchem.ncbi.nlm.nih.gov/compound/71583>->dcterms:title" ;
+            sh:resultPath dcterms:title ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5595 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_AcquisitionNucleus> ;
+            sh:resultMessage "Recommended: has_quantitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb69 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR_AcquisitionNucleus> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb55 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+            sh:resultMessage "Recommended: had_input_activity" ;
+            sh:resultPath prov:wasInformedBy ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb1 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR_Spectrometer> ;
+            sh:resultMessage "Recommended: has_quantitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb69 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR_AcquisitionNucleusAtom> ;
+            sh:resultMessage "Recommended: has_quantitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb69 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR> ;
+            sh:resultMessage "Recommended: had_output_entity" ;
+            sh:resultPath prov:generated ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb18 ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+                    sh:resultMessage "Recommended: evaluated_activity" ;
+                    sh:resultPath prov:wasInformedBy ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: evaluated_activity" ;
+                            sh:path prov:wasInformedBy ;
+                            sh:qualifiedMinCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:EvaluatedActivityShape ;
+                                    sh:or ( [ sh:class prov:Activity ] [ sh:class SIO:010345 ] ) ] ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+                    sh:resultMessage "Recommendations for EvaluatedEntity (via evaluated_entity) not met" ;
+                    sh:resultPath prov:used ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:OrConstraintComponent ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb3824 ;
+                    sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR_Spectrum> ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+                    sh:resultMessage "Recommended: had_output_entity" ;
+                    sh:resultPath prov:generated ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: had_output_entity" ;
+                            sh:minCount 1 ;
+                            sh:path prov:generated ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+                    sh:resultMessage "Recommended: has_quantitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: has_quantitative_attribute" ;
+                            sh:path dcterms:relation ;
+                            sh:qualifiedMinCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:QuantitativeAttributeShape ;
+                                    sh:or ( [ sh:class qudt:Quantity ] [ sh:class AFR:0002409 ] [ sh:class CHMO:0002820 ] [ sh:class CHMO:0002855 ] [ sh:class SIO:001089 ] [ sh:class SIO:001406 ] ) ] ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+                    sh:resultMessage "Recommended: had_input_activity" ;
+                    sh:resultPath prov:wasInformedBy ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: had_input_activity" ;
+                            sh:path prov:wasInformedBy ;
+                            sh:qualifiedMinCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:ActivityShape ;
+                                    sh:or ( [ sh:class prov:Activity ] [ sh:class SIO:010345 ] ) ] ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+                    sh:resultMessage "Recommended: has_qualitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: has_qualitative_attribute" ;
+                            sh:path dcterms:relation ;
+                            sh:qualifiedMinCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:QualitativeAttributeShape ;
+                                    sh:or ( [ sh:class prov:Entity ] [ sh:class CHEMINF:000018 ] [ sh:class CHEMINF:000042 ] [ sh:class CHEMINF:000059 ] [ sh:class CHEMINF:000107 ] [ sh:class CHEMINF:000113 ] ) ] ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+                    sh:resultMessage "Recommendations for Entity (via had_input_entity) not met" ;
+                    sh:resultPath prov:used ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:OrConstraintComponent ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb3776 ;
+                    sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Spectrum> ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+                    sh:resultMessage "Recommended: carried_out_by" ;
+                    sh:resultPath prov:wasAssociatedWith ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: carried_out_by" ;
+                            sh:minCount 1 ;
+                            sh:path prov:wasAssociatedWith ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+                    sh:resultMessage "Recommendations for EvaluatedEntity (via evaluated_entity) not met" ;
+                    sh:resultPath prov:used ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:OrConstraintComponent ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb3824 ;
+                    sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Spectrum> ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+                    sh:resultMessage "Recommendations for Entity (via had_input_entity) not met" ;
+                    sh:resultPath prov:used ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:OrConstraintComponent ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb3776 ;
+                    sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR_Spectrum> ] ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1> ;
+            sh:resultMessage "Recommendations for DataGeneratingActivity (via was_generated_by) not met" ;
+            sh:resultPath prov:wasGeneratedBy ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommendations for DataGeneratingActivity (via was_generated_by) not met" ;
+                    sh:node dcatap_plus:DataGeneratingActivityShapeRecommendations ;
+                    sh:path prov:wasGeneratedBy ;
+                    sh:severity sh:Warning ] ;
             sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Solvent> ;
+            sh:resultMessage "Recommended: has_quantitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb69 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2#EvaluatedCompound> ;
+            sh:resultMessage "Recommended: inchi" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: inchi" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/entity/InChiShape> ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb55 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+            sh:resultMessage "Recommended: has_quantitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_quantitative_attribute" ;
+                    sh:path dcterms:relation ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node dcatap_plus:QuantitativeAttributeShape ;
+                            sh:or ( [ sh:class qudt:Quantity ] [ sh:class AFR:0002409 ] [ sh:class CHMO:0002820 ] [ sh:class CHMO:0002855 ] [ sh:class SIO:001089 ] [ sh:class SIO:001406 ] ) ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2#EvaluatedCompound> ;
+            sh:resultMessage "Recommended: inchikey" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: inchikey" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/entity/InChIKeyShape> ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2#EvaluatedCompound> ;
+            sh:resultMessage "Recommended: iupac_name" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: iupac_name" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/entity/IUPACNameShape> ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pubchem.ncbi.nlm.nih.gov/compound/679> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb55 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+            sh:resultMessage "Recommended: had_output_entity" ;
+            sh:resultPath prov:generated ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb18 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_qualitative_attribute" ;
+                    sh:path dcterms:relation ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node dcatap_plus:QualitativeAttributeShape ;
+                            sh:or ( [ sh:class prov:Entity ] [ sh:class CHEMINF:000018 ] [ sh:class CHEMINF:000042 ] [ sh:class CHEMINF:000059 ] [ sh:class CHEMINF:000107 ] [ sh:class CHEMINF:000113 ] ) ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Spectrometer> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb55 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2#EvaluatedCompound> ;
+            sh:resultMessage "Recommended: has_molar_mass" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_molar_mass" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/entity/MolarMassShape> ] ;
+                    sh:severity sh:Warning ] ],
         [ a sh:ValidationResult ;
             sh:detail [ a sh:ValidationResult ;
                     sh:focusNode <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ;
@@ -37,14 +358,117 @@
                     sh:resultPath dcterms:title ;
                     sh:resultSeverity sh:Violation ;
                     sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-                    sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1765 ] ;
-            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Solvent> ;
-            sh:resultMessage "Value does not conform to Shape dcatap_plus:AgenticEntity. See details for more information." ;
-            sh:resultPath dcterms:hasPart ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5595 ] ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR> ;
+            sh:resultMessage "Value does not conform to Shape dcatap_plus:AgenticEntityShape. See details for more information." ;
+            sh:resultPath prov:wasAssociatedWith ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:NodeConstraintComponent ;
-            sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1767 ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5885 ;
             sh:value <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+                    sh:resultMessage "Focus node does not conform to shape MaxCount 1: [ sh:node dcatap_plus:PlanShape ]" ;
+                    sh:resultPath prov:used ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:QualifiedMaxCountConstraintComponent ;
+                    sh:sourceShape [ sh:name "realized_plan" ;
+                            sh:path prov:used ;
+                            sh:qualifiedMaxCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:PlanShape ] ] ] ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1> ;
+            sh:resultMessage "Value does not conform to Shape dcatap_plus:DataGeneratingActivityShape. See details for more information." ;
+            sh:resultPath prov:wasGeneratedBy ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape [ sh:class prov:Activity ;
+                    sh:description "An activity that generated, or provides the business context for, the creation of the dataset." ;
+                    sh:minCount 1 ;
+                    sh:node dcatap_plus:DataGeneratingActivityShape ;
+                    sh:nodeKind sh:IRI ;
+                    sh:order 35 ;
+                    sh:path prov:wasGeneratedBy ] ;
+            sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR_AcquisitionNucleusAtom> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb55 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1> ;
+            sh:resultMessage "Recommendations for EvaluatedEntity (via is_about_entity) not met" ;
+            sh:resultPath dcterms:subject ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommendations for EvaluatedEntity (via is_about_entity) not met" ;
+                    sh:or ( [ sh:not [ sh:or ( [ ] [ ] [ ] ) ] ] [ sh:node dcatap_plus:EvaluatedEntityShapeRecommendations ] ) ;
+                    sh:path dcterms:subject ;
+                    sh:severity sh:Warning ] ;
+            sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2#EvaluatedCompound> ;
+            sh:resultMessage "Recommended: smiles" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: smiles" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/entity/SMILESShape> ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR_Solvent> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb55 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR_AcquisitionNucleus> ;
+            sh:resultMessage "Recommended: has_quantitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb69 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Solvent> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb55 ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ;
+                    sh:resultMessage "Recommended: has_quantitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5931 ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ;
+                    sh:resultMessage "Recommended: has_qualitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5917 ] ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR> ;
+            sh:resultMessage "Recommendations for Entity (via had_input_entity) not met" ;
+            sh:resultPath prov:used ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb17 ;
+            sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Spectrometer> ;
+            sh:resultMessage "Recommended: has_quantitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb69 ],
         [ a sh:ValidationResult ;
             sh:detail [ a sh:ValidationResult ;
                     sh:detail [ a sh:ValidationResult ;
@@ -53,28 +477,67 @@
                             sh:resultPath dcterms:title ;
                             sh:resultSeverity sh:Violation ;
                             sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-                            sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1765 ] ;
+                            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5595 ] ;
                     sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Solvent> ;
-                    sh:resultMessage "Value does not conform to Shape dcatap_plus:AgenticEntity. See details for more information." ;
+                    sh:resultMessage "Value does not conform to Shape dcatap_plus:AgenticEntityShape. See details for more information." ;
                     sh:resultPath dcterms:hasPart ;
                     sh:resultSeverity sh:Violation ;
                     sh:sourceConstraintComponent sh:NodeConstraintComponent ;
-                    sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1767 ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5610 ;
                     sh:value <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ] ;
             sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR> ;
-            sh:resultMessage "Value does not conform to Shape dcatap_plus:AgenticEntity. See details for more information." ;
+            sh:resultMessage "Value does not conform to Shape dcatap_plus:AgenticEntityShape. See details for more information." ;
             sh:resultPath prov:wasAssociatedWith ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:NodeConstraintComponent ;
-            sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1823 ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5885 ;
             sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Solvent> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ;
-            sh:resultMessage "More than 1 values on <https://pubchem.ncbi.nlm.nih.gov/compound/71583>->dcterms:title" ;
-            sh:resultPath dcterms:title ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-            sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1765 ],
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR_Spectrum> ;
+                    sh:resultMessage "Recommended: has_qualitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5917 ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR_Spectrum> ;
+                    sh:resultMessage "Recommended: has_quantitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5931 ] ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#NMRSpectralAnalysis> ;
+            sh:resultMessage "Recommendations for Entity (via had_input_entity) not met" ;
+            sh:resultPath prov:used ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb17 ;
+            sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR_Spectrum> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1> ;
+            sh:resultMessage "Recommended: contact_point" ;
+            sh:resultPath dcat:contactPoint ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: contact_point" ;
+                    sh:minCount 1 ;
+                    sh:path dcat:contactPoint ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR_Spectrometer> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb55 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR_Solvent> ;
+            sh:resultMessage "Recommended: has_quantitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb69 ],
         [ a sh:ValidationResult ;
             sh:detail [ a sh:ValidationResult ;
                     sh:focusNode <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ;
@@ -82,33 +545,186 @@
                     sh:resultPath dcterms:title ;
                     sh:resultSeverity sh:Violation ;
                     sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-                    sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1765 ] ;
-            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR> ;
-            sh:resultMessage "Value does not conform to Shape dcatap_plus:AgenticEntity. See details for more information." ;
-            sh:resultPath prov:wasAssociatedWith ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5595 ] ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR_Solvent> ;
+            sh:resultMessage "Value does not conform to Shape dcatap_plus:AgenticEntityShape. See details for more information." ;
+            sh:resultPath dcterms:hasPart ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:NodeConstraintComponent ;
-            sh:sourceShape _:nab372f9aa0a146178eb8f658e9b13e9eb1823 ;
-            sh:value <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ] .
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5610 ;
+            sh:value <https://pubchem.ncbi.nlm.nih.gov/compound/71583> ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ;
+                    sh:resultMessage "Recommended: has_quantitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5931 ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ;
+                    sh:resultMessage "Recommended: has_qualitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb5917 ] ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#CDCl3_13C_NMR> ;
+            sh:resultMessage "Recommendations for Entity (via had_input_entity) not met" ;
+            sh:resultPath prov:used ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb17 ;
+            sh:value <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DMSO_13C_NMR> ;
+            sh:resultMessage "Recommended: had_input_activity" ;
+            sh:resultPath prov:wasInformedBy ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n069550f81fb94425a96c262b933ed7ccb1 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1> ;
+            sh:resultMessage "Recommended: is_about_activity" ;
+            sh:resultPath dcterms:subject ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: is_about_activity" ;
+                    sh:path dcterms:subject ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node dcatap_plus:EvaluatedActivityShape ;
+                            sh:or ( [ sh:class prov:Activity ] [ sh:class SIO:010345 ] ) ] ;
+                    sh:severity sh:Warning ] ] .
 
-_:nab372f9aa0a146178eb8f658e9b13e9eb1767 sh:class prov:Agent ;
-    sh:description "The slot to specify parts of an AgenticEntity that are themselves AgenticEntities." ;
-    sh:node dcatap_plus:AgenticEntity ;
+_:N0011b0c0dd104ba9b1339fb50f977fcf sh:class AFR:0002409 .
+
+_:N034a44af9a5b41ebab8e855eb1246acb rdf:first [ sh:class prov:Entity ] ;
+    rdf:rest ( [ sh:class CHEMINF:000018 ] [ sh:class CHEMINF:000042 ] [ sh:class CHEMINF:000059 ] [ sh:class CHEMINF:000107 ] [ sh:class CHEMINF:000113 ] ) .
+
+_:N093538399cf844b1afb327aca8485276 rdf:first [ sh:class prov:Agent ] ;
+    rdf:rest ( [ sh:class AFE:0000153 ] [ sh:class SIO:010344 ] [ sh:class SIO:010417 ] [ sh:class prov:SoftwareAgent ] ) .
+
+_:N0d32a5eb13324268a618079b186830d7 sh:or ( [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] ) .
+
+_:N0ec85c65f29144558cfb875368499b28 sh:node dcatap_plus:QuantitativeAttributeShape ;
+    sh:or ( [ sh:class qudt:Quantity ] [ sh:class AFR:0002409 ] [ sh:class CHMO:0002820 ] [ sh:class CHMO:0002855 ] [ sh:class SIO:001089 ] [ sh:class SIO:001406 ] ) .
+
+_:N11c8b64ff2294065888a8aff89c608be sh:class qudt:Quantity .
+
+_:N133b81d6167341f188d588c28ee18c62 rdf:first [ sh:class SIO:010417 ] ;
+    rdf:rest ( [ sh:class prov:SoftwareAgent ] ) .
+
+_:N153580d8203c47ee8720f32e5225270e sh:class CHEMINF:000107 .
+
+_:N15e9b9aa216f441aaca195e18ecfefa6 sh:class SIO:001089 .
+
+_:N2b5f29e0a7b44964b9040d8c8d43d022 sh:class SIO:001406 .
+
+_:N35c36c2b6b654fcf98da0b46c1b3382e sh:node dcatap_plus:QualitativeAttributeShape ;
+    sh:or _:N034a44af9a5b41ebab8e855eb1246acb .
+
+_:N369deb680fd14675af23ceba0391cd75 rdf:first [ sh:class AFE:0000153 ] ;
+    rdf:rest ( [ sh:class SIO:010344 ] _:N3497a4683be142378ddaa124b6cdc4f3 _:N74f4d3fd78ec48fdbfdaa27f2605b0a6 ) .
+
+_:N3bb9398e2a6c4b84a3d30df3fd833a94 rdf:first [ sh:class CHEMINF:000042 ] ;
+    rdf:rest ( [ sh:class CHEMINF:000059 ] _:N153580d8203c47ee8720f32e5225270e [ sh:class CHEMINF:000113 ] ) .
+
+_:N43294bb23ee648f4a0692fab9e791165 rdf:first [ sh:node dcatap_plus:EvaluatedEntityShapeRecommendations ] ;
+    rdf:rest () .
+
+_:N4c18d0ee77fb4c0cae805819155679da sh:node dcatap_plus:EntityShapeRecommendations .
+
+_:N54209d929f9440af8e6129eae7013ead rdf:first _:N11c8b64ff2294065888a8aff89c608be ;
+    rdf:rest ( _:N0011b0c0dd104ba9b1339fb50f977fcf [ sh:class CHMO:0002820 ] [ sh:class CHMO:0002855 ] _:N15e9b9aa216f441aaca195e18ecfefa6 _:N2b5f29e0a7b44964b9040d8c8d43d022 ) .
+
+_:N5ab2d7399b8840b8a97222fefe20d98d rdf:first [ sh:class prov:Entity ] ;
+    rdf:rest ( [ sh:class CHEMINF:000018 ] _:N91860015c1f84f2ea763c1276d2ab022 _:Na6485faf97a94f40a71587a37f20ff6b _:N153580d8203c47ee8720f32e5225270e _:Ne3de31eec9ba4fb79dfb44f7aa8ccda0 ) .
+
+_:N6e0656f1dad4497f9f6c8639323fefa2 sh:class prov:Agent .
+
+_:N70d2cd32740446ae8e6aeb5cbc3b0c5d sh:not [ sh:or ( [ ] [ ] [ ] ) ] .
+
+_:N75cd9f04d5ba4b55b1a4d962f0dd0f02 rdf:first _:N6e0656f1dad4497f9f6c8639323fefa2 ;
+    rdf:rest _:N369deb680fd14675af23ceba0391cd75 .
+
+_:N7fc10615a5b94520a7065d0d7290e316 rdf:first _:N70d2cd32740446ae8e6aeb5cbc3b0c5d ;
+    rdf:rest _:N43294bb23ee648f4a0692fab9e791165 .
+
+_:N95ce577c65764a5a8d85ed87d9c4b70e rdf:first [ sh:not _:N0d32a5eb13324268a618079b186830d7 ] ;
+    rdf:rest ( _:N4c18d0ee77fb4c0cae805819155679da ) .
+
+_:Nbc4fc8d766ca4c528301a8c022d6f015 sh:node dcatap_plus:QualitativeAttributeShape ;
+    sh:or _:N5ab2d7399b8840b8a97222fefe20d98d .
+
+_:Nf3d805f841d9400883e37af8d497ec68 sh:node dcatap_plus:QuantitativeAttributeShape ;
+    sh:or _:N54209d929f9440af8e6129eae7013ead .
+
+_:n069550f81fb94425a96c262b933ed7ccb3776 sh:message "Recommendations for Entity (via had_input_entity) not met" ;
+    sh:or _:N95ce577c65764a5a8d85ed87d9c4b70e ;
+    sh:path prov:used ;
+    sh:severity sh:Warning .
+
+_:n069550f81fb94425a96c262b933ed7ccb3824 sh:message "Recommendations for EvaluatedEntity (via evaluated_entity) not met" ;
+    sh:or _:N7fc10615a5b94520a7065d0d7290e316 ;
+    sh:path prov:used ;
+    sh:severity sh:Warning .
+
+_:n069550f81fb94425a96c262b933ed7ccb5610 sh:description "The slot to specify parts of an AgenticEntity that are themselves AgenticEntities." ;
+    sh:node dcatap_plus:AgenticEntityShape ;
     sh:nodeKind sh:IRI ;
+    sh:or _:N093538399cf844b1afb327aca8485276 ;
     sh:order 5 ;
     sh:path dcterms:hasPart .
 
-_:nab372f9aa0a146178eb8f658e9b13e9eb1823 sh:class prov:Agent ;
-    sh:description "The slot to specify the AgenticEntity that played a certain part in carrying out the Activity, either via having a specific role, function or disposition that was realized in the Activity." ;
-    sh:node dcatap_plus:AgenticEntity ;
+_:n069550f81fb94425a96c262b933ed7ccb5885 sh:description "The slot to specify the AgenticEntity that played a certain part in carrying out the Activity, either via having a specific role, function or disposition that was realized in the Activity." ;
+    sh:node dcatap_plus:AgenticEntityShape ;
     sh:nodeKind sh:IRI ;
+    sh:or _:N75cd9f04d5ba4b55b1a4d962f0dd0f02 ;
     sh:order 8 ;
     sh:path prov:wasAssociatedWith .
 
-_:nab372f9aa0a146178eb8f658e9b13e9eb1765 sh:datatype xsd:string ;
+_:n069550f81fb94425a96c262b933ed7ccb1 sh:message "Recommended: had_input_activity" ;
+    sh:minCount 1 ;
+    sh:path prov:wasInformedBy ;
+    sh:severity sh:Warning .
+
+_:n069550f81fb94425a96c262b933ed7ccb18 sh:message "Recommended: had_output_entity" ;
+    sh:minCount 1 ;
+    sh:path prov:generated ;
+    sh:severity sh:Warning .
+
+_:n069550f81fb94425a96c262b933ed7ccb17 sh:message "Recommendations for Entity (via had_input_entity) not met" ;
+    sh:node dcatap_plus:EntityShapeRecommendations ;
+    sh:path prov:used ;
+    sh:severity sh:Warning .
+
+_:n069550f81fb94425a96c262b933ed7ccb5595 sh:datatype xsd:string ;
     sh:description "This slot is described in more detail within the class in which it is used." ;
     sh:maxCount 1 ;
     sh:nodeKind sh:Literal ;
     sh:order 1 ;
     sh:path dcterms:title .
+
+_:n069550f81fb94425a96c262b933ed7ccb5917 sh:message "Recommended: has_qualitative_attribute" ;
+    sh:path dcterms:relation ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape _:Nbc4fc8d766ca4c528301a8c022d6f015 ;
+    sh:severity sh:Warning .
+
+_:n069550f81fb94425a96c262b933ed7ccb5931 sh:message "Recommended: has_quantitative_attribute" ;
+    sh:path dcterms:relation ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape _:N0ec85c65f29144558cfb875368499b28 ;
+    sh:severity sh:Warning .
+
+_:n069550f81fb94425a96c262b933ed7ccb69 sh:message "Recommended: has_quantitative_attribute" ;
+    sh:path dcterms:relation ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape _:Nf3d805f841d9400883e37af8d497ec68 ;
+    sh:severity sh:Warning .
+
+_:n069550f81fb94425a96c262b933ed7ccb55 sh:message "Recommended: has_qualitative_attribute" ;
+    sh:path dcterms:relation ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape _:N35c36c2b6b654fcf98da0b46c1b3382e ;
+    sh:severity sh:Warning .
 

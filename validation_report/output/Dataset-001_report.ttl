@@ -1,6 +1,232 @@
+@prefix AFR: <http://purl.allotrope.org/ontologies/result#AFR_> .
+@prefix BFO: <http://purl.obolibrary.org/obo/BFO_> .
+@prefix CHEBI: <http://purl.obolibrary.org/obo/CHEBI_> .
+@prefix CHEMINF: <http://semanticscience.org/resource/CHEMINF_> .
+@prefix CHMO: <http://purl.obolibrary.org/obo/CHMO_> .
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix OBI: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix PROCO: <http://purl.obolibrary.org/obo/PROCO_> .
+@prefix SIO: <http://semanticscience.org/resource/SIO_> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap_plus: <https://w3id.org/nfdi-de/dcat-ap-plus/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a sh:ValidationReport ;
-    sh:conforms true .
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+            sh:resultMessage "Recommended: had_input_entity" ;
+            sh:resultPath prov:used ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: had_input_entity" ;
+                    sh:minCount 1 ;
+                    sh:path prov:used ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_qualitative_attribute" ;
+                    sh:path dcterms:relation ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node dcatap_plus:QualitativeAttributeShape ;
+                            sh:or ( [ sh:class prov:Entity ] [ sh:class CHEMINF:000018 ] [ sh:class CHEMINF:000042 ] [ sh:class CHEMINF:000059 ] [ sh:class CHEMINF:000107 ] [ sh:class CHEMINF:000113 ] ) ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1> ;
+            sh:resultMessage "Recommended: keyword" ;
+            sh:resultPath dcat:keyword ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: keyword" ;
+                    sh:minCount 1 ;
+                    sh:path dcat:keyword ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1> ;
+            sh:resultMessage "Recommended: contact_point" ;
+            sh:resultPath dcat:contactPoint ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: contact_point" ;
+                    sh:minCount 1 ;
+                    sh:path dcat:contactPoint ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+            sh:resultMessage "Recommended: had_input_activity" ;
+            sh:resultPath prov:wasInformedBy ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: had_input_activity" ;
+                    sh:minCount 1 ;
+                    sh:path prov:wasInformedBy ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+            sh:resultMessage "Recommended: carried_out_by" ;
+            sh:resultPath prov:wasAssociatedWith ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: carried_out_by" ;
+                    sh:minCount 1 ;
+                    sh:path prov:wasAssociatedWith ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+            sh:resultMessage "Recommended: had_output_entity" ;
+            sh:resultPath prov:generated ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: had_output_entity" ;
+                    sh:minCount 1 ;
+                    sh:path prov:generated ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1> ;
+            sh:resultMessage "Recommended: is_about_entity" ;
+            sh:resultPath dcterms:subject ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: is_about_entity" ;
+                    sh:path dcterms:subject ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node dcatap_plus:EvaluatedEntityShape ;
+                            sh:or ( [ sh:class prov:Entity ] [ sh:class OBI:0000747 ] [ sh:class SIO:001378 ] ) ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1> ;
+            sh:resultMessage "Recommended: is_about_activity" ;
+            sh:resultPath dcterms:subject ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: is_about_activity" ;
+                    sh:path dcterms:subject ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node dcatap_plus:EvaluatedActivityShape ;
+                            sh:or ( [ sh:class prov:Activity ] [ sh:class SIO:010345 ] ) ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+                    sh:resultMessage "Recommended: has_quantitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: has_quantitative_attribute" ;
+                            sh:path dcterms:relation ;
+                            sh:qualifiedMinCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:QuantitativeAttributeShape ;
+                                    sh:or ( [ sh:class qudt:Quantity ] [ sh:class AFR:0002409 ] [ sh:class CHMO:0002820 ] [ sh:class CHMO:0002855 ] [ sh:class SIO:001089 ] [ sh:class SIO:001406 ] ) ] ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+                    sh:resultMessage "Recommended: evaluated_activity" ;
+                    sh:resultPath prov:wasInformedBy ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: evaluated_activity" ;
+                            sh:path prov:wasInformedBy ;
+                            sh:qualifiedMinCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:EvaluatedActivityShape ;
+                                    sh:or ( [ sh:class prov:Activity ] [ sh:class SIO:010345 ] ) ] ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+                    sh:resultMessage "Recommended: had_output_entity" ;
+                    sh:resultPath prov:generated ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: had_output_entity" ;
+                            sh:minCount 1 ;
+                            sh:path prov:generated ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+                    sh:resultMessage "Recommended: had_input_activity" ;
+                    sh:resultPath prov:wasInformedBy ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: had_input_activity" ;
+                            sh:path prov:wasInformedBy ;
+                            sh:qualifiedMinCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:ActivityShape ;
+                                    sh:or ( [ sh:class prov:Activity ] [ sh:class SIO:010345 ] ) ] ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+                    sh:resultMessage "Recommended: carried_out_by" ;
+                    sh:resultPath prov:wasAssociatedWith ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: carried_out_by" ;
+                            sh:minCount 1 ;
+                            sh:path prov:wasAssociatedWith ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+                    sh:resultMessage "Recommended: had_input_entity" ;
+                    sh:resultPath prov:used ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: had_input_entity" ;
+                            sh:path prov:used ;
+                            sh:qualifiedMinCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:EntityShape ;
+                                    sh:or ( [ sh:class prov:Entity ] [ sh:class BFO:0000040 ] [ sh:class CHEBI:23367 ] [ sh:class CHEBI:33250 ] [ sh:class NCIT:C48810 ] [ sh:class OBI:0000747 ] [ sh:class PROCO:0000029 ] [ sh:class SIO:001378 ] [ sh:class SIO:010411 ] ) ] ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+                    sh:resultMessage "Recommended: evaluated_entity" ;
+                    sh:resultPath prov:used ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: evaluated_entity" ;
+                            sh:path prov:used ;
+                            sh:qualifiedMinCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:EvaluatedEntityShape ;
+                                    sh:or ( [ sh:class prov:Entity ] [ sh:class OBI:0000747 ] [ sh:class SIO:001378 ] ) ] ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+                    sh:resultMessage "Recommended: has_qualitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: has_qualitative_attribute" ;
+                            sh:path dcterms:relation ;
+                            sh:qualifiedMinCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:QualitativeAttributeShape ;
+                                    sh:or ( [ sh:class prov:Entity ] [ sh:class CHEMINF:000018 ] [ sh:class CHEMINF:000042 ] [ sh:class CHEMINF:000059 ] [ sh:class CHEMINF:000107 ] [ sh:class CHEMINF:000113 ] ) ] ;
+                            sh:severity sh:Warning ] ] ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1> ;
+            sh:resultMessage "Recommendations for DataGeneratingActivity (via was_generated_by) not met" ;
+            sh:resultPath prov:wasGeneratedBy ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommendations for DataGeneratingActivity (via was_generated_by) not met" ;
+                    sh:node dcatap_plus:DataGeneratingActivityShapeRecommendations ;
+                    sh:path prov:wasGeneratedBy ;
+                    sh:severity sh:Warning ] ;
+            sh:value <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N/CHMO0000595.1#DataGeneratingActivity> ;
+            sh:resultMessage "Recommended: has_quantitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_quantitative_attribute" ;
+                    sh:path dcterms:relation ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node dcatap_plus:QuantitativeAttributeShape ;
+                            sh:or ( [ sh:class qudt:Quantity ] [ sh:class AFR:0002409 ] [ sh:class CHMO:0002820 ] [ sh:class CHMO:0002855 ] [ sh:class SIO:001089 ] [ sh:class SIO:001406 ] ) ] ;
+                    sh:severity sh:Warning ] ] .
 

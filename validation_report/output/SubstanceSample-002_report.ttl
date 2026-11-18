@@ -1,6 +1,144 @@
+@prefix AFR: <http://purl.allotrope.org/ontologies/result#AFR_> .
+@prefix CHEMINF: <http://semanticscience.org/resource/CHEMINF_> .
+@prefix CHMO: <http://purl.obolibrary.org/obo/CHMO_> .
+@prefix SIO: <http://semanticscience.org/resource/SIO_> .
+@prefix dcatap_plus: <https://w3id.org/nfdi-de/dcat-ap-plus/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a sh:ValidationReport ;
-    sh:conforms true .
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ;
+            sh:resultMessage "Recommended: has_mass" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_mass" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/materials/MassShape> ;
+                            sh:or ( [ sh:class qudt:Quantity ] [ sh:class AFR:0002409 ] ) ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ;
+            sh:resultMessage "Recommended: has_ph_value" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_ph_value" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/entity/PHValueShape> ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ;
+            sh:resultMessage "Recommended: has_density" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_density" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/materials/DensityShape> ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ;
+            sh:resultMessage "Recommended: has_temperature" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_temperature" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:class qudt:Quantity ;
+                            sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/materials/TemperatureShape> ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2#EvaluatedCompound> ;
+            sh:resultMessage "Recommended: has_quantitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_quantitative_attribute" ;
+                    sh:path dcterms:relation ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node dcatap_plus:QuantitativeAttributeShape ;
+                            sh:or ( [ sh:class qudt:Quantity ] [ sh:class AFR:0002409 ] [ sh:class CHMO:0002820 ] [ sh:class CHMO:0002855 ] [ sh:class SIO:001089 ] [ sh:class SIO:001406 ] ) ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ;
+            sh:resultMessage "Recommended: has_volume" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_volume" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:class qudt:Quantity ;
+                            sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/materials/VolumeShape> ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ;
+            sh:resultMessage "Recommended: has_concentration" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_concentration" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/entity/ConcentrationShape> ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_qualitative_attribute" ;
+                    sh:path dcterms:relation ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node dcatap_plus:QualitativeAttributeShape ;
+                            sh:or ( [ sh:class prov:Entity ] [ sh:class CHEMINF:000018 ] [ sh:class CHEMINF:000042 ] [ sh:class CHEMINF:000059 ] [ sh:class CHEMINF:000107 ] [ sh:class CHEMINF:000113 ] ) ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2#EvaluatedCompound> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_qualitative_attribute" ;
+                    sh:path dcterms:relation ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node dcatap_plus:QualitativeAttributeShape ;
+                            sh:or ( [ sh:class prov:Entity ] [ sh:class CHEMINF:000018 ] [ sh:class CHEMINF:000042 ] [ sh:class CHEMINF:000059 ] [ sh:class CHEMINF:000107 ] [ sh:class CHEMINF:000113 ] ) ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ;
+            sh:resultMessage "Recommended: has_amount" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_amount" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:class qudt:Quantity ;
+                            sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/chemistry/entity/AmountOfSubstanceShape> ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://dx.doi.org/10.14272/UGRXAOUDHZOHPF-UHFFFAOYSA-N.2> ;
+            sh:resultMessage "Recommended: has_pressure" ;
+            sh:resultPath SIO:000008 ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_pressure" ;
+                    sh:path SIO:000008 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:class qudt:Quantity ;
+                            sh:node <https://w3id.org/nfdi-de/dcat-ap-plus/materials/PressureShape> ] ;
+                    sh:severity sh:Warning ] ] .
 

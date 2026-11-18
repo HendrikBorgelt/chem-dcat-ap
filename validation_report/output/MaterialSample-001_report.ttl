@@ -1,6 +1,74 @@
+@prefix AFR: <http://purl.allotrope.org/ontologies/result#AFR_> .
+@prefix CHEMINF: <http://semanticscience.org/resource/CHEMINF_> .
+@prefix CHMO: <http://purl.obolibrary.org/obo/CHMO_> .
+@prefix SIO: <http://semanticscience.org/resource/SIO_> .
+@prefix dcatap_plus: <https://w3id.org/nfdi-de/dcat-ap-plus/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a sh:ValidationReport ;
-    sh:conforms true .
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <https://www.example.com/wood3000> ;
+            sh:resultMessage "Recommended: has_quantitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_quantitative_attribute" ;
+                    sh:path dcterms:relation ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node dcatap_plus:QuantitativeAttributeShape ;
+                            sh:or ( [ sh:class qudt:Quantity ] [ sh:class AFR:0002409 ] [ sh:class CHMO:0002820 ] [ sh:class CHMO:0002855 ] [ sh:class SIO:001089 ] [ sh:class SIO:001406 ] ) ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://www.example.com/wood3000> ;
+            sh:resultMessage "Recommended: has_qualitative_attribute" ;
+            sh:resultPath dcterms:relation ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommended: has_qualitative_attribute" ;
+                    sh:path dcterms:relation ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:node dcatap_plus:QualitativeAttributeShape ;
+                            sh:or ( [ sh:class prov:Entity ] [ sh:class CHEMINF:000018 ] [ sh:class CHEMINF:000042 ] [ sh:class CHEMINF:000059 ] [ sh:class CHEMINF:000107 ] [ sh:class CHEMINF:000113 ] ) ] ;
+                    sh:severity sh:Warning ] ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <https://www.wikidata.org/wiki/Q4204> ;
+                    sh:resultMessage "Recommended: has_quantitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: has_quantitative_attribute" ;
+                            sh:path dcterms:relation ;
+                            sh:qualifiedMinCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:QuantitativeAttributeShape ;
+                                    sh:or ( [ sh:class qudt:Quantity ] [ sh:class AFR:0002409 ] [ sh:class CHMO:0002820 ] [ sh:class CHMO:0002855 ] [ sh:class SIO:001089 ] [ sh:class SIO:001406 ] ) ] ;
+                            sh:severity sh:Warning ] ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <https://www.wikidata.org/wiki/Q4204> ;
+                    sh:resultMessage "Recommended: has_qualitative_attribute" ;
+                    sh:resultPath dcterms:relation ;
+                    sh:resultSeverity sh:Warning ;
+                    sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+                    sh:sourceShape [ sh:message "Recommended: has_qualitative_attribute" ;
+                            sh:path dcterms:relation ;
+                            sh:qualifiedMinCount 1 ;
+                            sh:qualifiedValueShape [ sh:node dcatap_plus:QualitativeAttributeShape ;
+                                    sh:or ( [ sh:class prov:Entity ] [ sh:class CHEMINF:000018 ] [ sh:class CHEMINF:000042 ] [ sh:class CHEMINF:000059 ] [ sh:class CHEMINF:000107 ] [ sh:class CHEMINF:000113 ] ) ] ;
+                            sh:severity sh:Warning ] ] ;
+            sh:focusNode <https://www.example.com/wood3000> ;
+            sh:resultMessage "Recommendations for Entity (via derived_from) not met" ;
+            sh:resultPath prov:wasDerivedFrom ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape [ sh:message "Recommendations for Entity (via derived_from) not met" ;
+                    sh:node dcatap_plus:EntityShapeRecommendations ;
+                    sh:path prov:wasDerivedFrom ;
+                    sh:severity sh:Warning ] ;
+            sh:value <https://www.wikidata.org/wiki/Q4204> ] .
 
